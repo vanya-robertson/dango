@@ -78,7 +78,7 @@ Full license distribuited \
 with copy of software")
         exit()
     elif arg == "-c" or arg == "controls":
-        print("""Use vim or arrow keys to move,
+        print("""Use verkman-vim or arrow keys to move,
 space or enter to place a stone.
 You can also use your mouse, double click to place a stone.
 'p' to pass, 'u' to undo.""")
@@ -272,25 +272,25 @@ def draw_board(stdscr):
 
 def get_move(c, y, x, stdscr):
     """Given y, x, getch(), returns the new (y, x) or None if no change"""
-    if c == curses.KEY_LEFT or c == ord('h'):
+    if c == curses.KEY_LEFT or c == ord('i'):
         x -= 2
         if x > SIZE*2:
             x = MARGIN_X
         if x < MARGIN_X:
             x = SIZE*2 + 1
-    elif c == curses.KEY_RIGHT or c == ord('l'):
+    elif c == curses.KEY_RIGHT or c == ord('o'):
         x += 2
         if x > SIZE*2 + 2:
             x = MARGIN_X
         if x < MARGIN_X:
             x = SIZE*2 + 1
-    elif c == curses.KEY_UP or c == ord('k'):
+    elif c == curses.KEY_UP or c == ord('e'):
         y -= 1
         if y > SIZE:
             y = 1
         if y < 1:
             y = SIZE
-    elif c == curses.KEY_DOWN or c == ord('j'):
+    elif c == curses.KEY_DOWN or c == ord('n'):
         y += 1
         if y > SIZE:
             y = 1
