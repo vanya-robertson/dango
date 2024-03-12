@@ -387,7 +387,7 @@ def play(stdscr):
                 moves.append(None)
                 captures.append(None)
                 color *= -1
-            elif c == ord("N") or c == ord("n"):  # toggle kifu
+            elif c == ord("J") or c == ord("j"):  # toggle kifu
                 if not moves:
                     break
                 if n_toggle:
